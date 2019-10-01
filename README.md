@@ -1,12 +1,18 @@
-node-https-response
+# node-https-response
+
 A simple object to return http response object with required headers for AWS api gatway to enable the cors
 
-Build Status Dependency Status NPM version
+[![Build Status](https://github.com/Pranay2111/node-https-response)](https://github.com/Pranay2111/node-https-response)
+[![NPM version](https://img.shields.io/npm/v/http-response-object.svg)](https://www.npmjs.com/package/node-https-response)
 
-Installation
-npm install node-https-response
-Usage
+
+## Installation
+
+    npm install node-https-response
+
+## Usage
 //success method 
+```js
 var response = require('node-https-response');
 var res = new response.success(200, 'Successfully submited' , 'This is my Data' , { header1 : 25, header2 :'Play'} );
 //statusCode === 200 
@@ -19,10 +25,14 @@ var response = require('node-https-response');
 var res = new response.(, 'Successfully submited' , 'This is my Data' , { header1 : 25, header2 :'Play'} );
 //statusCode === 400
 //message === 'Bad Request'
+```
 
-Properties
-statusCode: Number - the status code of the response
-body: object of statusCode, message, data 
-headers: Object - the headers of the response. The keys are automatically made lower case and default to cors enabeling object .
-License
-ISC
+## Properties
+
+ - `statusCode`: Number - the status code of the response
+ - `body`: Object | String - object of statusCode, message, data as a parameter
+ - `headers`: Object - the headers of the response.  The keys are automatically made lower case.
+
+## License
+
+  ISC
