@@ -22,7 +22,7 @@ var res = new response.success(200, 'Successfully submited' , 'This is my Data' 
 
 //error method
 var response = require('node-https-response');
-var res = new response.(, 'Successfully submited' , 'This is my Data' , { header1 : 25, header2 :'Play'} );
+var res = new response.error(404, 'Page Not found' );
 //statusCode === 400
 //message === 'Bad Request'
 ```
